@@ -1,0 +1,120 @@
+body { background: white; padding-top: 30px; }
+.carousel_item
+{
+    max-width: 100%;
+    overflow: hidden
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+.bg-company-red
+{
+     style="background-color: darkred;"
+}
+
+/* Container holding the image and the text */
+.container {
+
+}
+
+.text-block
+{
+    margin: 50px;
+    padding: 8px;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-caption {
+    color: white;
+    font-size: 38px;
+    font: verdana;
+}
+/* change the background color */
+.navbar-custom {
+    background-color: #425453;
+    padding: 15;
+    position: fixed;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.advantage-tile-content {
+    width: 250px;
+    height: 250px;
+}
+
+.advantage-row
+{
+}
+
+.card-img-top
+{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.advantage-tile {
+    padding: 30px;
+    border: none;
+
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}

@@ -1,320 +1,144 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="ru">
-	<head>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-			integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-		    <meta charset="utf-8">
-		    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	        <title>Milgred language school</title>
-	        <style>
-	        	body { background: white; padding-top: 30px; }
-	        	.carousel_item 
-	        	{
-	        		max-width: 100%;
-	        		overflow: hidden
- 					position: relative;
-				    text-align: center;
-				    color: white;
-	        	}
+{% block content %}
+<div class = "container-fluid" style="box-sizing: border-box; padding: 0px; overflow-x:hidden;">
+    <a name="about-us"/>
+    <div class ="row">
+        <div class = "col">
+            <div id="headerFeaturesPreferences" class="d-none d-sm-block carousel slide" data-ride="carousel" name="about-us">
+              <ol class="carousel-indicators">
+                <li data-target="#headerFeaturesPreferences" data-slide-to="0" class="active"></li>
+                <li data-target="#headerFeaturesPreferences" data-slide-to="1"></li>
+                <li data-target="#headerFeaturesPreferences" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="First slide">
+                  <div class="centered carousel-caption">Improve your skills</div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="Second slide">
+                  <div class="centered carousel-caption">Improve your languauge</div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="Third slide">
+                  <div class="centered carousel-caption">Improve your life</div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#headerFeaturesPreferences" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#headerFeaturesPreferences" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div>
+    </div>
 
-	        	
-	        	.bg-company-red
-	        	{
-	        		 style="background-color: darkred;"
-	        	}
+    <div class = "text-block">
+        Цель нашего клуба - превратить процесс изучения языка в легкое и захватывающее приключение. Мы стремимся обеспечить чудесную атмосферу праздника посредством вовлечения наших студентов в творческий процесс и языковую среду. Всякий студент будет для нас другом, с которым мы общаемся, искренне радуюясь его успехам, и всеми силами помогая реализовать их мечты.
+    </div>
 
-	        	/* Container holding the image and the text */
-				.container {
-				   
-				}
+    <div class = "row">
+        <div class = "col">
+            <div class="card-group">
+              <div class="card advantage-tile">
+                <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">English For Everyone</h5>
+                  <p class="card-text">В нашем клубе мы подходим к каждому студенту индивидуально. Неважно, какой у вас уровень - мы найдем к вам подход</p>
+                </div>
+              </div>
+              <div class="card advantage-tile">
+                <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Study with fun</h5>
+                  <p class="card-text">Изучайте язык легко и играючи: мы предоставляем вам площадку для творчества и общения на английском языке</p>
+                </div>
+              </div>
+              <div class="card advantage-tile">
+                <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Стирая границы...</h5>
+                  <p class="card-text">
+                        Английский язык позволяет общаться легко и комфортно с миллионами людей по всему миру. Попробуйте и Вы - наш разговорный клуб позволит вам получить практику и обрести уверенность в общении на анлгийском языке!
+                    </p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
-				.text-block
-				{
-					margin: 50px;
-					padding: 8px;
-				}
+    <a name="schedule-prices" />
+    <div class = "row">
+        <div class = "col">
+            <div class = "text-block">
+                <h3>Расписание и цены</h3>
+                <p>
+                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth
+                </p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Группа</th>
+                        <th>Расписание</th>
+                        <th>Цена</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Младшая</td>
+                        <td>пн, ср, пт.</td>
+                        <td>300 р.</td>
+                      </tr>
+                      <tr>
+                        <td>Средняя</td>
+                        <td>вт, чт, сб</td>
+                        <td>200 р.</td>
+                      </tr>
+                      <tr>
+                        <td>Разговорный клуб</td>
+                        <td>Ежедневно</td>
+                        <td>400 р.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
 
-				/* Bottom left text */
-				.bottom-left {
-				    position: absolute;
-				    bottom: 8px;
-				    left: 16px;
-				}
+    <a name="contacts" />
+    <div class = "row">
+        <div class = "col d-none d-sm-block" >
+            <div class="text-block">
+                <h3>Контакты и проезд</h3>
+            </div>
+            <div class = "text-block" style="text-align: center;">
+                <div id="map" style="width:400px;height:400px; display: inline-block;" >
+                </div>
 
-				/* Top left text */
-				.top-left {
-				    position: absolute;
-				    top: 8px;
-				    left: 16px;
-				}
+                <div id="contact-block" style="height:400px; overflow:hidden; display: inline-block; text-align: left;">
+                    <ul style="list-style: none; text-align: left;">
+                        <li>Mr John Smith</li>
+                        <li>132, My Street,</li>
+                        <li>Bigtown BG23 4YZ</li>
+                        <li>England</li>
+                        <li>email@example.com</li>
+                        <li>+1234567</li>
 
-				/* Top right text */
-				.top-right {
-				    position: absolute;
-				    top: 8px;
-				    right: 16px;
-				}
+                    </ul>
+                </div>
 
-				/* Bottom right text */
-				.bottom-right {
-				    position: absolute;
-				    bottom: 8px;
-				    right: 16px;
-				}
+            </div>
+        </div>
+    </div>
 
-				/* Centered text */
-				.centered {
-				    position: absolute;
-				    top: 50%;
-				    left: 50%;
-				    transform: translate(-50%, -50%);
-				}
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyC5tFnjC79bYgZZ18Y8NQUGFIYtDi8ttfw"></script>
 
-				.carousel-caption {
-					color: white;
-					font-size: 38px;
-					font: verdana;
-				}
-				/* change the background color */
-				.navbar-custom {
-				    background-color: #425453;
-				    padding: 15;
-				    position: fixed;
-				    top: 0; /* Position the navbar at the top of the page */
-    				width: 100%; /* Full width */
-				}
-
-				.advantage-tile-content {
-					width: 250px;
-					height: 250px;
-				}
-
-				.advantage-row 
-				{
-				}
-
-				.card-img-top
-				{
-					width: 150px;
-					height: 150px;
-					margin: auto;
-				}
-
-				.advantage-tile {
-					padding: 30px;	
-					border: none;					
-
-				}
-
-				/* change the brand and text color */
-				.navbar-custom .navbar-brand,
-				.navbar-custom .navbar-text {
-				    color: rgba(255,255,255,.8);
-				}
-
-				/* change the link color */
-				.navbar-custom .navbar-nav .nav-link {
-				    color: rgba(255,255,255,.5);
-				}
-
-				/* change the color of active or hovered links */
-				.navbar-custom .nav-item.active .nav-link,
-				.navbar-custom .nav-item:hover .nav-link {
-				    color: #ffffff;
-				}
-
-				.navbar-fixed-top.scrolled {
-				  background-color: #fff !important;
-				  transition: background-color 200ms linear;
-				}
-	    	</style>
-	</head>
-	<body>
-		<a name="about-us">
-		<div class = "container-fluid" style="box-sizing: border-box; padding: 0px; overflow-x:hidden;">
-			<div class ="row">
-				<div class = "col">
-					<div id="headerFeaturesPreferences" class="d-none d-sm-block carousel slide" data-ride="carousel" name="about-us">
-					  <ol class="carousel-indicators">
-					    <li data-target="#headerFeaturesPreferences" data-slide-to="0" class="active"></li>
-					    <li data-target="#headerFeaturesPreferences" data-slide-to="1"></li>
-					    <li data-target="#headerFeaturesPreferences" data-slide-to="2"></li>
-					  </ol>
-					  <div class="carousel-inner">
-					    <div class="carousel-item active">
-					      <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="First slide">
-						  <div class="centered carousel-caption">Improve your skills</div>
-					    </div>
-					    <div class="carousel-item">
-					      <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="Second slide">
-					      <div class="centered carousel-caption">Improve your languauge</div>
-					    </div>
-					    <div class="carousel-item">
-					      <img class="d-block w-100" src="{% static 'gfx/london3.jpg' %}" alt="Third slide">
-					      <div class="centered carousel-caption">Improve your life</div>
-					    </div>
-					  </div>
-					  <a class="carousel-control-prev" href="#headerFeaturesPreferences" role="button" data-slide="prev">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					  </a>
-					  <a class="carousel-control-next" href="#headerFeaturesPreferences" role="button" data-slide="next">
-					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					  </a>
-					</div>
-				</div>
-			</div>
-			<div class = "row">
-				<div class = "col">
-					<nav class="navbar navbar-expand-md navbar-dark navbar-custom py-0" style="z-index: 2; overflow-x: hidden;
-" id="main-navbar">
-					    <a class="navbar-brand" href="#">Mildred School</a>
-					    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					        <span class="navbar-toggler-icon"></span>
-					    </button>
-
-					    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					        <ul class="navbar-nav mr-auto">
-					        	<li class="nav-item">
-					                <a class="nav-link" href="#about-us">О нас</a>
-					            </li>
-					            <li class="nav-item">
-					                <a class="nav-link" href="#schedule-prices">Цены</a>
-					            </li>
-					            <li class="nav-item">
-					                <a class="nav-link" href="#contacts">Контакты</a>
-					            </li>
-					        </ul>
-					    </div>
-					</nav>
-				</div>
-			</div>
-			
-			<div class = "text-block">
-				Цель нашего клуба - превратить процесс изучения языка в легкое и захватывающее приключение. Мы стремимся обеспечить чудесную атмосферу праздника посредством вовлечения наших студентов в творческий процесс и языковую среду. Всякий студент будет для нас другом, с которым мы общаемся, искренне радуюясь его успехам, и всеми силами помогая реализовать их мечты.
-			</div>
-			
-			<div class = "row">
-				<div class = "col">
-					<div class="card-group">
-					  <div class="card advantage-tile">
-					    <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
-					    <div class="card-body">
-					      <h5 class="card-title">English For Everyone</h5>
-					      <p class="card-text">В нашем клубе мы подходим к каждому студенту индивидуально. Неважно, какой у вас уровень - мы найдем к вам подход</p>
-					    </div>
-					  </div>
-					  <div class="card advantage-tile">
-					    <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
-					    <div class="card-body">
-					      <h5 class="card-title">Study with fun</h5>
-					      <p class="card-text">Изучайте язык легко и играючи: мы предоставляем вам площадку для творчества и общения на английском языке</p>
-					    </div>
-					  </div>
-					  <div class="card advantage-tile">
-					    <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
-					    <div class="card-body">
-					      <h5 class="card-title">Стирая границы...</h5>
-					      <p class="card-text">
-					      		Английский язык позволяет общаться легко и комфортно с миллионами людей по всему миру. Попробуйте и Вы - наш разговорный клуб позволит вам получить практику и обрести уверенность в общении на анлгийском языке!
-					      	</p>
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-		
-		<a name="schedule-prices">
-		<div class = "row">
-			<div class = "col">
-				<div class = "text-block">
-					<h3>Расписание и цены</h3>
-					<p>
-						But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth
-					</p>
-					<table class="table">
-					    <thead>
-					      <tr>
-					        <th>Группа</th>
-					        <th>Расписание</th>
-					        <th>Цена</th>
-					      </tr>
-					    </thead>
-					    <tbody>
-					      <tr>
-					        <td>Младшая</td>
-					        <td>пн, ср, пт.</td>
-					        <td>300 р.</td>
-					      </tr>
-					      <tr>
-					        <td>Средняя</td>
-					        <td>вт, чт, сб</td>
-					        <td>200 р.</td>
-					      </tr>
-					      <tr>
-					        <td>Разговорный клуб</td>
-					        <td>Ежедневно</td>
-					        <td>400 р.</td>
-					      </tr>
-					    </tbody>
-					  </table>
-				</div>
-			</div>
-		</div>
-
-		<a name="contacts">
-		<div class = "row">
-			<div class = "col d-none d-sm-block" >
-				<div class="text-block">
-					<h3>Контакты и проезд</h3>
-				</div>
-				<div class = "text-block" style="text-align: center;">
-					<div id="map" style="width:400px;height:400px; display: inline-block;" >
-					</div>
-
-					<div id="contact-block" style="height:400px; overflow:hidden; display: inline-block; text-align: left;">
-						<ul style="list-style: none; text-align: left;">
-							<li>Mr John Smith</li>
-							<li>132, My Street,</li>
-							<li>Bigtown BG23 4YZ</li>
-							<li>England</li>
-							<li>email@example.com</li>
-							<li>+1234567</li>
-
-						</ul>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-		<script type="text/javascript">
-			function myMap() {
-			    var mapOptions = {
-			        center: new google.maps.LatLng(45.853034, 40.128567),
-			        zoom: 17,
-			        mapTypeId: google.maps.MapTypeId.Map
-			    }
-				var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-			}
-			$(function () {
-				 $(document).scroll(function () {
-				    $(".nav-link").each(function( index ) {
-				    	var link = $(this).attr('href');
-						var anchor = link.match(/#(.*)/)[1] 
-						var pos = $("a[name=" + anchor +"]").position();
-						var scrollBottom = $(document).scrollTop() + $(window).height();
-				 		$( this ).toggleClass('active',  pos.top <= scrollBottom &&  pos.top > $(document).scrollTop());
-					})
-				  });
-			})
-
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyC5tFnjC79bYgZZ18Y8NQUGFIYtDi8ttfw"></script>		
-	<body>
-<html>
+{% endblock %}
