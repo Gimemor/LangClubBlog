@@ -118,3 +118,18 @@ body { background: white; padding-top: 30px; }
   background-color: #fff !important;
   transition: background-color 200ms linear;
 }
+
+.blog-entry
+{
+    margin-bottom: 8px;
+}
+
+.blog-entry h1 {
+    padding-bottom: 0px;
+    margin-bottom: 2px;
+}
+
+.blog-entry small {
+    padding-upper: 0px;
+    margin-upper: 2px;
+}
