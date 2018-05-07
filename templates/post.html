@@ -1,0 +1,10 @@
+{% for post in posts %}
+
+<div>
+  <hr>
+    <h1>{{post.title}}</h1>
+    <p>{{post.post}}</p>
+    <small>Posted:{{post.date | date}} {{post.date | time}}</small>
+</div>
+
+{% endfor %}
