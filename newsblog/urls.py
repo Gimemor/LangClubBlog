@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from django.conf.urls.static import static
+import newsblog.settings
 urlpatterns = [
     path('blog/', include('blog.urls')),
     path('', include('landing.urls')),
     path('admin/', admin.site.urls),
+    path('gallery/', include('gallery.urls'))
 ]
+urlpatterns += static(newsblog.settings.MEDIA_URL, document_root=newsblog.settings.MEDIA_ROOT)
+
