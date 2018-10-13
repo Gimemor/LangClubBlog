@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class = "blog-entry">
+        <h1>{{post.title}}</h1>
+        <small>Дата: {{post.date | date}} {{post.date | time}}</small>
+    </div>
+    {% autoescape off %}
+    <p>{{ post.post }}</p>
+    {% endautoescape %}
+    <a class="float-right" href="/blog/">Вернуться</a>
+</div>
+{% endblock %}

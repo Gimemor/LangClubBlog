@@ -7,26 +7,28 @@
 {% endblock %}
 
 {% block content %}
-
+<div class = "container">
 {% if album.is_visible %}
         <header class="col s12 m12 l10 offset-l1">
-            <h1>{{ album.title }}</h1>
+            <h2>{{ album.title }}</h2>
+            <small>
+            Created on <time datetime="{{ album.created|date:"Y-m-d" }}">{{ album.created|date:"d M Y" }}</time>
+            </small>
         </header>
-        <section class="col s12 m12 l10 offset-l1">
+        <section class="col s12 m12 l10 offset-l1 float-center">
             <p>{{ album.description }}</p>
-
-            <div class="container">
+            <hr>
                 {% for item in images %}
-                <a class="col s12 m3" style="padding: 8px" href="javascript:pswpInit({{ forloop.counter0 }});">
-                    <img src="{{ item.thumb.url }}" class="responsive-img dpg-album-image" alt="{{ item.alt }}" />
-                </a>
+                <div style="padding: 8px; display: inline-block;" >
+                    <a  href="javascript:pswpInit({{ forloop.counter0 }});">
+                        <img src="{{ item.thumb.url }}" class="responsive-img dpg-album-image" alt="{{ item.alt }}" />
+                    </a>
+                </div>
                 {% endfor %}
-            </div>
 
         </section>
-        <footer class="col s12 m12 l10 offset-l1">
-            Created on <time datetime="{{ album.created|date:"Y-m-d" }}">{{ album.created|date:"d M Y" }}</time>
-            <p>Tags: {{ album.tags }}</p>
+        <footer class="col s12 m12 l10 offset-l1 ">
+            <a class = "float-right" href="/gallery">Назад</a>
         </footer>
 
         <!-- PhotoSwipe -->
@@ -99,7 +101,7 @@
     {% else %}
         <h3>This album is temporarily unavailable.</h3>
     {% endif %}
-
+</div>>
 {% endblock %}
 
 {% block js %}
