@@ -94,7 +94,11 @@ body { background: white; }
 .advantage-tile {
     padding: 30px;
     border: none;
+    box-shadow: none;
+}
 
+.card-body .card-text{
+    text-align: justify;
 }
 
 /* change the brand and text color */
@@ -215,3 +219,27 @@ strong {
     max-width:300px;
 }
 
+.text-list
+{
+
+}
+.no-border
+{
+    border: none;
+}
+
+#topButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+}
+
+#topButton :hover {
+    background-color: #42FF53;
+}
+
+.nav-colored-text {
+     text-shadow: 2px 2px #000000;
+}

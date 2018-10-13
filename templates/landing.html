@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block meta %}
+<meta name="yandex-verification" content="23c889f35be8a4d9" />
+{% endblock %}
 {% block content %}
 <a name="about-us"/>
 <div class ="row">
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="{% static 'gfx/london2.jpg' %}" alt="People club" class="opaque">
-                <div class="caption center-align">
+                <img src="{% static 'gfx/london3.jpg' %}" alt="People club" class="opaque">
+                <div class="caption center-align nav-colored-text">
                     <h1>
                         People club<br/>
-                        <small class="light text-lighten-3 hide-on-small-only">Best place to improve language</small>
+                        <small class="light text-lighten-3 hide-on-small-only">Языковые курсы в городе Тихорецк</small>
                     </h1>
-
                 </div>
             </li>
             <li>
                 <img src="{% static 'images/lake.jpg' %}" alt="People club" class="opaque">
-                <div class="caption left-align">
-                    <h1>
+                <div class="caption left-align ">
+                    <h1 class ="nav-colored-text">
                         Для всех возрастов<br />
                         <small class="light text-lighten-3 hide-on-small-only">И уровней тоже.</small>
                     </h1>
@@ -27,33 +29,37 @@
         </ul>
     </div>
 </div>
-<div class = "text-block">
-    Цель нашего клуба - превратить процесс изучения языка в легкое и захватывающее приключение. Мы стремимся обеспечить чудесную атмосферу праздника посредством вовлечения наших студентов в творческий процесс и языковую среду. Всякий студент будет для нас другом, с которым мы общаемся, искренне радуюясь его успехам, и всеми силами помогая реализовать их мечты.
-</div>
-
 <div class = "row">
     <div class = "col">
-        <div class="card-group">
-          <div class="card advantage-tile">
-            <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+        <div class="card-group  no-border">
+          <div class="card advantage-tile   no-border">
+            <img class="card-img-top" src="{% static 'gfx/icon-classroom-green.png' %}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">English For Everyone</h5>
-              <p class="card-text">В нашем клубе мы подходим к каждому студенту индивидуально. Неважно, какой у вас уровень - мы найдем к вам подход</p>
+              <p class="card-text">
+                  В языковом клубе People мы подходим к каждому студенту индивидуально. Неважно, какой у вас уровень
+                  - мы найдем к вам подход
+              </p>
             </div>
           </div>
-          <div class="card advantage-tile">
-            <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+          <div class="card advantage-tile  no-border">
+            <img class="card-img-top" src="{% static 'gfx/office-funtime.png' %}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Study with fun</h5>
-              <p class="card-text">Изучайте язык легко и играючи: мы предоставляем вам площадку для творчества и общения на английском языке</p>
+              <p class="card-text">
+                  Изучайте язык легко и играючи: мы предоставляем вам площадку для творчества
+                  и общения на английском языке в городе Тихорецке
+              </p>
             </div>
           </div>
-          <div class="card advantage-tile">
-            <img class="card-img-top" src="{% static 'gfx/clock.gif' %}" alt="Card image cap">
+          <div class="card advantage-tile  no-border">
+            <img class="card-img-top" src="{% static 'gfx/earth.png' %}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Стирая границы...</h5>
               <p class="card-text">
-                    Английский язык позволяет общаться легко и комфортно с миллионами людей по всему миру. Попробуйте и Вы - наш разговорный клуб позволит вам получить практику и обрести уверенность в общении на анлгийском языке!
+                    Умение говорить по-английски даст возможность взаимодействовать с миллионами людей по всему миру.
+                  Попробуйте и Вы - наши курсы позволят вам получить практику и обрести уверенность
+                  в общении с носителями языка!
                 </p>
             </div>
           </div>
@@ -61,78 +67,105 @@
     </div>
 </div>
 
-<a name="schedule-prices" />
-<div class = "row">
-    <div class = "col">
-        <div class = "text-block">
-            <h3>Расписание и цены</h3>
-            <p>
-                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth
-            </p>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th>Группа</th>
-                    <th>Расписание</th>
-                    <th>Цена</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Младшая</td>
-                    <td>пн, ср, пт.</td>
-                    <td>300 р.</td>
-                  </tr>
-                  <tr>
-                    <td>Средняя</td>
-                    <td>вт, чт, сб</td>
-                    <td>200 р.</td>
-                  </tr>
-                  <tr>
-                    <td>Разговорный клуб</td>
-                    <td>Ежедневно</td>
-                    <td>400 р.</td>
-                  </tr>
-                </tbody>
-              </table>
+<div class="row">
+    <div  class="col-md-2"></div>
+    <div class = "text-block col-md-7">
+        <h3>Наши принципы:</h3>
+        <p align="justify">
+            Наша учебная программа составлена с целью превратить процесс изучения языка из обычного курса иностранных языков в
+            легкое и захватывающее
+            приключение. Вы новичок в изучении языков, или уже имеете опыт - у нас Вы найдете чем заняться
+            Мы стремимся обеспечить атмосферу праздника посредством вовлечения наших студентов в творческий
+            процесс. У нас вы можете найти языковую среду и общение с иностранцами не покидая Тихорецк!
+            Всякий студент будет для нас другом, с которым мы общаемся, искренне радуюясь его
+            успехам, и всеми силами помогая реализовать их мечты.
+        </p>
+    </div>
+</div>
+<div class="container">
+    <a name="schedule-prices" />
+    <div class = "row">
+        <div class = "col">
+            <div class = "text-block">
+                <h3>Расписание и цены</h3>
+                <p>
+
+                </p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Группа</th>
+                        <th>Расписание</th>
+                        <th>Цена</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Младшая</td>
+                        <td>пн, ср, пт.</td>
+                        <td>300 р.</td>
+                      </tr>
+                      <tr>
+                        <td>Средняя</td>
+                        <td>вт, чт, сб</td>
+                        <td>200 р.</td>
+                      </tr>
+                      <tr>
+                        <td>Разговорный клуб</td>
+                        <td>Ежедневно</td>
+                        <td>400 р.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+    <a name="contacts" />
+    <div class="text-block">
+        <h3>Контакты и проезд</h3>
+    </div>
+    <div class = "row">
+        <div class="col-md-1"></div>
+        <div id="contact-block" class="col-md-5" >
+            <ul style="list-style: none; text-align: left;">
+                <li>Школа Английского языка</li>
+                <li>г. Тихорецк</li>
+                <li>Краснодарский край</li>
+                <li>ул. Энгельса, д. 118</li>
+                <li>english@peopleclub.info</li>
+                <li>+8-918-394-86-55</li>
+            </ul>
+        </div>
+        <div class = "col-md-5">
+            <div id="map" style="width:400px;height:400px; display: inline-block;" ></div>
         </div>
     </div>
 </div>
-
-<a name="contacts" />
-<div class = "row">
-    <div class = "col d-none d-sm-block" >
-        <div class="text-block">
-            <h3>Контакты и проезд</h3>
-        </div>
-        <div class = "text-block" style="text-align: center;">
-            <div id="map" style="width:400px;height:400px; display: inline-block;" >
-            </div>
-
-            <div id="contact-block" style="height:400px; overflow:hidden; display: inline-block; text-align: left;">
-                <ul style="list-style: none; text-align: left;">
-                    <li>Mr John Smith</li>
-                    <li>132, My Street,</li>
-                    <li>Bigtown BG23 4YZ</li>
-                    <li>England</li>
-                    <li>email@example.com</li>
-                    <li>+1234567</li>
-
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</div>
-
 <script type="text/javascript">
-    function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(45.853034, 40.128567),
-            zoom: 17,
-            mapTypeId: google.maps.MapTypeId.Map
+    function setCenter(geocoder, address) {
+      geocoder.geocode({
+        'address': address
+      }, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: results[0].geometry.location
+          });
+          var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+        } else {
+          alert('Geocode was not successful for the following reason: ' + status);
+          // return null;
         }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      });
+    }
+
+    function myMap() {
+        var geocoder1 = new google.maps.Geocoder();
+        setCenter(geocoder1, 'Россия, Тихорецк, Энгельса, 118');
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyC5tFnjC79bYgZZ18Y8NQUGFIYtDi8ttfw"></script>

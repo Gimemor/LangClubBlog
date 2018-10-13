@@ -1,33 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-<a name = "events"/>
-{% for post in posts %}
-<div class="text-block">
-    <div class = "blog-entry">
-        <h1>{{post.title}}</h1>
-        <small>Дата: {{post.date | date}} {{post.date | time}}</small>
-    </div>
-    <p>{{post.post}}</p>
-    <hr>
-</div>
-{% endfor %}
-<div class="pagination">
-    <span class="step-links">
-        {% if posts.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ contacts.previous_page_number }}">previous</a>
-        {% endif %}
+<div class = container>
+    {% for post in posts %}
+        <div class="text-block">
+            <div class = "blog-entry">
+                <h1>{{post.title}}</h1>
+                <small>Дата: {{post.date | date}} {{post.date | time}}</small>
+            </div>
+            {% autoescape off %}
+                <p>{{ post.description }}</p>
+                <div class="float-right">
+                    <a href="/blog/read/{{ post.id }}">Читать далее</a>
+                </div>
+            {% endautoescape %}
+            <hr>
+        </div>
+    {% endfor %}
+    {% if posts.paginator.count > 0  %}
+        <div class="pagination float-right ">
+            <span class="step-links">
+                {% if posts.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ contacts.previous_page_number }}">previous</a>
+                {% endif %}
 
-        <span class="current">
-            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
-        </span>
+                <span class="current">
+                    Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+                </span>
 
-        {% if posts.has_next %}
-            <a href="?page={{ posts.next_page_number }}">next</a>
-            <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
+                {% if posts.has_next %}
+                    <a href="?page={{ posts.next_page_number }}">next</a>
+                    <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    {% else %}
+        <div class="container text-center alert">
+            Сейчас мероприятий нет или они не указаны на сайте. Позвоните нам для справок!
+        </div>
+    {% endif %}
 </div>
 {% endblock %}
