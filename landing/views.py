@@ -9,3 +9,7 @@ def index(request):
     context = {
     }
     return HttpResponse(template.render(context, request))
+
+
+def gverification(request):
+    return render(request, "gverification.html");
