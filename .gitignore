@@ -1,2 +1,6 @@
 media/
 staticfiles/
+newsblog/settings.py
+*.pyc
+
+
