@@ -243,3 +243,12 @@ strong {
 .nav-colored-text {
      text-shadow: 2px 2px #000000;
 }
+
+#logo-container {
+    font-size: 3vw;
+  }
+
+
+.nav-link {
+    font-size: 1vw;
+  }
